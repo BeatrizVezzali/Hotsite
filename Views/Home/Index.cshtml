@@ -1,0 +1,250 @@
+﻿@model Interesse
+@{
+	ViewData["Title"] = "Hotsite";
+}
+
+<div class="row mt-3">
+	<div class="col-6">
+		<h1>Iniciativa Saúde da Cidade</h1>
+		<p>
+			Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+			at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+		</p>
+		<p>
+			Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+			at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+		</p>
+	</div>
+
+	<div class="col-6">
+		<img src="~/Imagens/vida-saudavel-scaled.jpg" style="height:400px ; 500px;">
+	</div>
+
+</div>
+
+<div class="row mt-3">
+	<div class="col-6 border border-dark">
+		<h2>Entre em contato!:</h2>
+		<p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+
+		<form method="POST" id="frmCadastro">
+			<div class="row">
+				<div class="col-2">
+					<label asp-for="Nome">Nome:</label>
+				</div>
+				<div class="col-10">
+					<input asp-for="Nome" id="nome"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2">
+					<label asp-for="Email">Email:</label>
+				</div>
+				<div class="col-10">
+					<input asp-for="Email" id="email"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2">
+					<label asp-for="Mensagem">Mensagem (opcional):</label>
+				</div>
+				<div class="col-10">
+					<textarea asp-for="Mensagem" id="mensagem"></textarea>
+				</div>
+			</div>
+			<div>
+				<input type="submit" id="botao" value="Enviar"/>
+			</div>
+		</form>
+	</div>
+
+	<div class="col-2 text-center">
+		<figure>
+			<figcaption>
+				<img src="~/Imagens/410909.png" style="height:110px; width:110px;">
+				<a href="#" data-toggle="modal" data-target="#Agenda">Agenda de eventos</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="col-2 text-center">
+		<figure>
+			<figcaption>
+				<img src="~/Imagens/552480.png" style="height:110px ; width:120px;">
+				<a href="#" data-toggle="modal" data-target="#Dicas">Dicas de vida saudável</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="col-2 text-center">
+		<figure>
+			<figcaption>
+				<img src="~/Imagens/1289376.png" style="height:110px ; width:110px;">
+				<a href="#" data-toggle="modal" data-target="#Apoiadores">Apoiadores</a>
+			</figcaption>
+		</figure>
+	</div>
+</div>
+
+
+<div class="modal fade" id="Agenda" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4>Agenda</h4>
+			</div>
+			<div class="modal-body">
+				<div>
+					<div class="row">
+						<div class="col-6">
+							<p>
+								10/10/10 10:10 - Evento 1
+
+								Lorem ipsum dolor sit amet et
+								delectus accommodare his
+								consul copiosae
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<p>
+								10/10/10 10:10 - Evento 2
+
+								Lorem ipsum dolor sit amet et
+								delectus accommodare his
+								consul copiosae
+							</p>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-6">
+
+							<p>
+								10/10/10 10:10 - Evento 3
+
+								Lorem ipsum dolor sit amet et
+								delectus accommodare his
+								consul copiosae
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="Dicas" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4>Dicas de vida saudável</h4>
+			</div>
+			<div class="modal-body">
+				<div>
+					<div class="row">
+						<div class="col-6">
+							<p>
+								Lorem ipsum dolor sit amet et
+								delectus accommodare his consul
+								copiosae legendos at vix ad putent
+								delectus delicata usu. Vidit dissentiet
+								eos
+							</p>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<p>
+								Lorem ipsum dolor sit amet et
+								delectus accommodare his consul
+								copiosae legendos at vix ad putent
+								delectus delicata usu. Vidit dissentiet
+								eos
+							</p>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<p>
+								Lorem ipsum dolor sit amet et
+								delectus accommodare his consul
+								copiosae legendos at vix ad putent
+								delectus delicata usu. Vidit dissentiet
+								eos
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="Apoiadores" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4>Apoiadores</h4>
+			</div>
+			<div class="modal-body">
+				<div>
+					<div class="row">
+						<img src="~/Imagens/Folhas.png" style="height:90px ; width:100px">
+						<div class="col-6">
+							<p style="font-weight:bold ;">
+								Empresa 1
+							</p>
+							<p>
+								descrição
+							</p>
+						</div>
+
+					</div>
+					<div class="row">
+						<img src="~/Imagens/coracao.png" style="height:90px ; width:100px">
+						<div class="col-6">
+							<p style="font-weight:bold ;">
+								Empresa 2
+							</p>
+							<p>
+								descrição
+							</p>
+						</div>
+
+					</div>
+					<div class="row">
+						<img src="~/Imagens/489860.png" style="height:90px ; width:100px">
+						<div class="col-6">
+							<p style="font-weight:bold ;">
+								Empresa 3
+							</p>
+							<p>
+								descrição
+							</p>
+						</div>
+
+					</div>
+					<div class="row">
+						<img src="~/Imagens/Fruta.png" style="height:90px ; width:100px">
+						<div class="col-6">
+							<p style="font-weight:bold ;">
+								Empresa 4
+							</p>
+							<p>
+								descrição
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
